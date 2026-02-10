@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="8">
+    <title>Shiv Shakti</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: radial-gradient(circle, #111, #000);
+        color: white;
+        text-align: center;
+    }
+    .scroll-text {
+        background: #222;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 10px 0;
+    }
+
+    .scroll-text span {
+        display: inline-block;
+        font-size: 26px;
+        animation: scroll 12s linear infinite;
+    }
+
+    @keyframes scroll {
+        from { transform: translateX(100%); }
+        to { transform: translateX(-100%); }
+    }
+    </style>
+  </head>
+
+  <body>
+    <div class="scroll-text">
+    <span>OM Namah Shiva</span>
+    </div>
+
+    <div class="Poster">
+    <img src="https://i.pinimg.com/736x/92/5f/35/925f35b4628058cdcebd8c7530a5b61c.jpg" alt="Shiva">
+    </div>
+
+    <form onsubmit="submitForm(event)">
+      <h3>Shiv Form</h3>
+      <input type="text" placeholder="Enter Name"> <required>
+        <input type="date" required>
+    
+    <div class="checkbox">
+      <label><input type="checkbox">Maths</label><br>
+      <label><input type="checkbox">Java</label><br>
+      <label><input type="checkbox">web Dev.</label><br>
+      <label><input type="checkbox">DSA</label><br>
+    </div>
+    <button type="submit">Submit</button>
+  </body>
+</html>
