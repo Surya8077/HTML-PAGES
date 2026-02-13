@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine Card</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #f5bec7, #f5bec7);
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+    }
+
+    .card {
+        background: white;
+        padding: 30px 40px;
+        border-radius: 0px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    button {
+        padding: 10px 25px;
+        font-size: 16px;
+        border: 2px solid black;   
+        border-radius: 0px;
+        cursor: pointer;
+        background-clip: padding-box;
+    }
+
+    .yes {
+        background: #ed5a05;
+        color: white;
+    }
+
+    .no {
+        background: #ea4d04;
+        color: white;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+    }
+</style>
+</head>
+
+<body>
+    
+
+<div class="card">
+    
+    <h1>DEAR, Will You Be My Valentine 😍</h1>
+    <div class="buttons">
+        <button class="yes" id="yesBtn">YES</button>
+        <button class="no" id="noBtn">NO</button>
+    </div>
+</div>
+
+<script>
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+
+    yesBtn.addEventListener("click", () => {
+        alert("Yay! You made my day!");
+    });
+
+    noBtn.addEventListener("click", () => {
+        const maxX = window.innerWidth - noBtn.offsetWidth;
+        const maxY = window.innerHeight - noBtn.offsetHeight;
+
+        const x = Math.random() * maxX;
+        const y = Math.random() * maxY;
+
+        noBtn.style.position = "fixed";
+        noBtn.style.left = `${x}px`;
+        noBtn.style.top = `${y}px`;
+    });
+</script>
+</body>
+</html>
